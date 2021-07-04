@@ -1,0 +1,40 @@
+﻿<Window x:Class="OrganiZer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OrganiZer"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        ResizeMode="CanResizeWithGrip"
+        AllowsTransparency="True"
+        MinHeight="480"
+        MinWidth="640"
+        WindowStartupLocation="CenterScreen"
+        Title="MainWindow" Height="720" Width="1280">
+    <Grid>
+        <Border BorderBrush="#101010" BorderThickness="3">
+            <DockPanel>
+                <DockPanel Height="26" VerticalAlignment="Top" DockPanel.Dock="Top">
+                    <Grid Name="TitleBarClose" Tag="#101010" MouseEnter="MouseHoverHighlight" MouseLeave="MouseLeaveHighlight" Width="26" DockPanel.Dock="Right" HorizontalAlignment="Right" Background="#101010">
+                        <Image Source="/Images/close.png" Width="10" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                    </Grid>
+                    <Grid Name="TitleBarWindow" Tag="#101010" MouseEnter="MouseHoverHighlight" MouseLeave="MouseLeaveHighlight" Width="26" DockPanel.Dock="Right" HorizontalAlignment="Right" Background="#101010">
+                        <Image Source="/Images/window.png" Width="10" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                    </Grid>
+                    <Grid Name="TitleBarMinimize" Tag="#101010" MouseEnter="MouseHoverHighlight" MouseLeave="MouseLeaveHighlight" Width="26" DockPanel.Dock="Right" HorizontalAlignment="Right" Background="#101010">
+                        <Image Source="/Images/minimize.png" Width="10" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                    </Grid>
+                    <Grid Background="#101010" Name="TitleBar">
+                        <TextBlock Name="TitleBarText" Text="OrganiZer" FontSize="15" FontFamily="Calibri" Foreground="#bababa" Margin="7,4,0,0"/>
+                    </Grid>
+
+                </DockPanel>
+                <Grid Background="#181818">
+                    <Frame Name="MainFrame"/>
+                </Grid>
+            </DockPanel>
+        </Border>
+        
+    </Grid>
+</Window>

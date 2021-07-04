@@ -1,0 +1,38 @@
+﻿<Page x:Class="OrganiZer.StartupPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:OrganiZer"
+      mc:Ignorable="d" 
+      d:DesignHeight="720" d:DesignWidth="1280"
+      Title="StartupPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.25*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock HorizontalAlignment="Center" Grid.ColumnSpan="2" FontSize="50" Foreground="WhiteSmoke" FontFamily="pack://application:,,,/Fonts/#Raleway" VerticalAlignment="Center" Text="Organizer Beta"/>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Left">
+            <Separator Background="#242424" Width="2" Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+        </StackPanel>
+        <Separator Grid.Row="1" Background="#242424" Grid.Column="0" Grid.ColumnSpan="2" Height="2" VerticalAlignment="Top" Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}"/>
+
+        <DockPanel Grid.Row="1">
+            <TextBlock Text="Recently Opened" DockPanel.Dock="Top" Margin="0,30,0,10" VerticalAlignment="Top" FontFamily="pack://application:,,,/Fonts/#Raleway" HorizontalAlignment="Center" FontSize="23" Foreground="#dfdfdf"/>
+            <Button Name="NewNoteButton" Click="NewNote" DockPanel.Dock="Bottom" Width="60" Height="25" Margin="0,0,0,10" Content="New" Background="#101010" Foreground="#dfdfdf" BorderBrush="#000000" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" DockPanel.Dock="Bottom" Name="RecentlyOpenedView" Margin="10">
+                <StackPanel Name="NotePanel">
+                </StackPanel>
+            </ScrollViewer>
+        </DockPanel> 
+    </Grid>
+</Page>
